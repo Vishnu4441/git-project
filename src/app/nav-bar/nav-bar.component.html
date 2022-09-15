@@ -1,0 +1,42 @@
+<p>
+    <mat-toolbar class="mat-elevation-z5">
+      <span class="example-spacer"></span>
+      <div mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <button type="button" mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+      </div>
+      <div class="my">
+      <span>GITHUB BROWSER</span>
+      </div>
+
+      
+    </mat-toolbar>
+  </p>
+
+  <mat-drawer-container class="example-container" autosize> 
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+
+    <button mat-button class="home-btn"  [routerLink]="['/demo2']">Demo Repository
+
+      <p style="font-size: small; font-weight: 100;"> About this Repository Project</p>
+    </button>
+
+    <button mat-button class="home-btn"  [routerLink]="['/demo2']">Demo Repository
+
+      <p style="font-size: small; font-weight: 100;"> About this Repository Project</p>
+    </button>
+
+   
+
+    <div class="example-button-container" id="add-btn">
+      <button mat-fab (click)="openDialog()" color="red" aria-label="Example icon button with a bookmark icon">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+      
+  </mat-drawer>
+ 
+<router-outlet></router-outlet>
+
+</mat-drawer-container>
+
+
